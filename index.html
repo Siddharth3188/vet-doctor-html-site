@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veterinary Clinic | Compassionate Pet Care</title>
+<meta name="description" content="Discover veterinary services, meet your veterinarian, and enquire about appointments for your pet.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- NAV: edit clinic name in script.js CONFIG -->
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Home">
+      <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#315B46"/><g fill="#FAF8F1"><ellipse cx="10" cy="12" rx="2.4" ry="3.2"/><ellipse cx="22" cy="12" rx="2.4" ry="3.2"/><ellipse cx="14" cy="8.5" rx="2.2" ry="3"/><ellipse cx="18" cy="8.5" rx="2.2" ry="3"/><path d="M16 14c-4 0-7 3.5-7 6.5 0 2 1.7 3 3.5 2.5 1.2-.4 2-.7 3.5-.7s2.3.3 3.5.7c1.8.5 3.5-.5 3.5-2.5 0-3-3-6.5-7-6.5z"/></g></svg>
+      <span data-cfg="clinicName">[Clinic Name]</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav id="navMenu" class="nav-menu" aria-label="Main">
+      <a href="#home">Home</a><a href="#about">About the Vet</a><a href="#services">Services</a><a href="#petcare">Pet Care</a><a href="#faq">FAQs</a><a href="#contact">Contact</a>
+      <a class="btn btn-primary nav-cta" href="#appointment">Book an Appointment</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">COMPASSIONATE VETERINARY CARE</p>
+      <h1>Because Every Pet Deserves Loving Care.</h1>
+      <p class="lead">Professional veterinary care for your beloved companions, with a focus on their health, comfort, and wellbeing.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#appointment">Book a Vet Appointment</a>
+        <a class="btn btn-ghost" href="#services">Explore Our Services</a>
+      </div>
+      <p class="hero-loc"><span data-cfg="clinicName">[Clinic Name]</span> &middot; <span data-cfg="city">[City / Area]</span></p>
+    </div>
+    <figure class="hero-photo">
+      <!-- REPLACE: images/vet-hero with the vet's approved photo (vet + dog, faces visible). -->
+      <img src="images/vet-hero.svg" width="1200" height="900" alt="Placeholder: veterinarian in a white coat with a friendly dog" fetchpriority="high">
+    </figure>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section alt" id="about">
+  <div class="container split">
+    <figure class="portrait">
+      <!-- REPLACE: images/vet-profile with the veterinarian's approved portrait. -->
+      <img src="images/vet-profile.svg" width="800" height="1000" alt="Placeholder portrait of the veterinarian" loading="lazy">
+    </figure>
+    <div>
+      <p class="eyebrow">ABOUT THE VET</p>
+      <h2>Meet Your Veterinarian</h2>
+      <h3 class="vet-name" data-cfg="vetName">Dr. [Name]</h3>
+      <dl class="facts">
+        <div><dt>Qualifications</dt><dd data-cfg="qualifications">[Verified qualifications]</dd></div>
+        <div><dt>Specialty</dt><dd data-cfg="specialty">[Veterinary specialty]</dd></div>
+        <div><dt>Experience</dt><dd data-cfg="experience">[Years of experience]</dd></div>
+        <div><dt>Clinic</dt><dd data-cfg="clinicName">[Clinic Name]</dd></div>
+      </dl>
+      <p><span data-cfg="vetName">Dr. [Name]</span> provides veterinary consultations and helps pet owners understand their animals' healthcare needs and available care options.</p>
+      <a class="btn btn-primary" href="#appointment">Schedule a Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES: delete any <article> to remove a service (e.g. Grooming) -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head"><h2>How We Care for Your Pets</h2><p>Explore the veterinary services offered by the practice.</p></div>
+    <div class="cards">
+      <article class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><rect x="4" y="4" width="16" height="16" rx="4"/></svg></div><h3>General Veterinary Consultation</h3><p>Pet owners can enquire about consultations for their animals.</p><a class="link" href="#appointment" data-service="General consultation">Enquire</a></article>
+      <article class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M14 4l6 6M5 19l1-4 9-9 3 3-9 9zM3 21l3-1"/></svg></div><h3>Vaccination Services</h3><p>A service category the clinic can enable or customise, subject to confirmation by the veterinarian.</p><a class="link" href="#appointment" data-service="Vaccination">Enquire</a></article>
+      <article class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 018-2.5A4.5 4.5 0 0120 10c0 6-8 11-8 11z"/></svg></div><h3>Preventive Pet Healthcare</h3><p>General preventive-care consultations and pet health guidance.</p><a class="link" href="#appointment" data-service="Preventive healthcare">Enquire</a></article>
+      <article class="card"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="M15 15l5 5"/></svg></div><h3>Pet Diagnostics</h3><p>[Placeholder: list the diagnostic services actually offered by the practice.]</p><a class="link" href="#appointment" data-service="Diagnostics">Enquire</a></article>
+      <article class="card" data-optional="grooming"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 6 6 10a6 6 0 01-12 0c0-4 3-6 6-10z"/></svg></div><h3>Grooming and Hygiene</h3><p>Optional service. Remove this card if the clinic does not offer grooming.</p><a class="link" href="#appointment" data-service="Grooming and hygiene">Enquire</a></article>
+      <article class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5l2-2v6h-6l2.5-2.5A5 5 0 007 12M20 12a8 8 0 01-14 5l-2 2v-6h6l-2.5 2.5A5 5 0 0017 12"/></svg></div><h3>Follow-up Consultations</h3><p>Pet owners can contact the clinic to enquire about follow-up care.</p><a class="link" href="#appointment" data-service="Follow-up consultation">Enquire</a></article>
+    </div>
+    <p class="note">Sample services only. Availability is confirmed by the clinic.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section alt" id="gallery">
+  <div class="container">
+    <div class="section-head"><h2>Care for Every Kind of Companion</h2></div>
+    <div class="gallery">
+      <figure class="g1"><img src="images/dog-consultation.svg" width="900" height="700" alt="Placeholder: veterinarian examining a dog" loading="lazy"></figure>
+      <figure class="g2"><img src="images/cat-care.svg" width="900" height="700" alt="Placeholder: a calm cat" loading="lazy"></figure>
+      <figure class="g3"><img src="images/happy-dog.svg" width="900" height="700" alt="Placeholder: a happy dog with its owner" loading="lazy"></figure>
+      <figure class="g4"><img src="images/clinic-interior.svg" width="900" height="700" alt="Placeholder: clean veterinary clinic interior" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section" id="why">
+  <div class="container">
+    <div class="section-head"><h2>Thoughtful Care for Your Best Friend</h2></div>
+    <div class="features">
+      <div><h3>Pet-Focused Consultations</h3><p>Time to discuss your pet's needs and your questions.</p></div>
+      <div><h3>Clear Communication with Pet Owners</h3><p>Plain explanations so you understand your options.</p></div>
+      <div><h3>Preventive Healthcare Guidance</h3><p>General guidance to support your pet's wellbeing.</p></div>
+      <div><h3>Convenient Appointment Enquiries</h3><p>Send an enquiry to the clinic in a few steps.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PET CARE -->
+<section class="section alt" id="petcare">
+  <div class="container">
+    <div class="section-head"><h2>Helping You Care for Your Companion</h2></div>
+    <div class="cards three">
+      <article class="card"><h3>Everyday Pet Wellness</h3><p>Fresh water, balanced meals, regular exercise, and a calm, safe space all support a pet's daily wellbeing.</p></article>
+      <article class="card"><h3>Preventive Care and Checkups</h3><p>Regular checkups give your veterinarian a chance to review your pet's health and answer your questions.</p></article>
+      <article class="card"><h3>Preparing for a Vet Visit</h3><p>Note any changes you've seen, bring previous records if you have them, and keep your pet secure and comfortable in transit.</p></article>
+    </div>
+    <p class="note">General information only. It does not replace advice from a qualified veterinarian.</p>
+  </div>
+</section>
+
+<!-- APPOINTMENT -->
+<section class="section" id="appointment">
+  <div class="container narrow">
+    <div class="section-head"><h2>Book an Appointment for Your Pet</h2><p>Contact the clinic to enquire about appointment availability and veterinary consultations.</p></div>
+    <form id="apptForm" class="form" novalidate>
+      <div class="field"><label for="owner">Pet owner's name *</label><input id="owner" name="owner" autocomplete="name" required><span class="err" id="owner-err"></span></div>
+      <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required><span class="err" id="phone-err"></span></div>
+      <div class="field"><label for="pet">Pet's name *</label><input id="pet" name="pet" required><span class="err" id="pet-err"></span></div>
+      <div class="field"><label for="type">Pet type *</label><select id="type" name="type" required><option value="">Select...</option><option>Dog</option><option>Cat</option><option>Other</option></select><span class="err" id="type-err"></span></div>
+      <div class="field"><label for="date">Preferred date *</label><input id="date" name="date" type="date" required><span class="err" id="date-err"></span></div>
+      <div class="field full"><label for="msg">Message (optional)</label><textarea id="msg" name="msg" rows="3" maxlength="400"></textarea></div>
+      <div class="full"><button class="btn btn-primary" type="submit">Prepare Enquiry</button></div>
+    </form>
+    <div id="review" class="review" hidden aria-live="polite">
+      <h3>Review your enquiry</h3>
+      <label for="reviewText" class="sr">Enquiry message</label>
+      <textarea id="reviewText" rows="6"></textarea>
+      <div class="actions"><button class="btn btn-primary" id="sendWa" type="button">Open WhatsApp</button><button class="btn btn-ghost" id="editBtn" type="button">Edit details</button></div>
+    </div>
+    <p id="demoMsg" class="demo-msg" role="status" hidden></p>
+    <p class="note">This demo form sends an enquiry through the configured contact method. Appointment confirmation must come from the clinic.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section alt" id="faq">
+  <div class="container narrow">
+    <div class="section-head"><h2>Frequently Asked Questions</h2></div>
+    <div class="faq">
+      <h3><button aria-expanded="false" aria-controls="a1" id="q1">How do I book a veterinary appointment?</button></h3>
+      <div id="a1" role="region" aria-labelledby="q1" hidden><p>Use the enquiry form on this page or contact the clinic by phone or WhatsApp. The clinic will confirm availability.</p></div>
+      <h3><button aria-expanded="false" aria-controls="a2" id="q2">What should I bring to my pet's consultation?</button></h3>
+      <div id="a2" role="region" aria-labelledby="q2" hidden><p>Bring any previous records you have and a note of changes you've observed. Keep your pet secure in a carrier or on a lead.</p></div>
+      <h3><button aria-expanded="false" aria-controls="a3" id="q3">Which animals does the clinic treat?</button></h3>
+      <div id="a3" role="region" aria-labelledby="q3" hidden><p>[Edit: list the animals the clinic treats.] Please enquire with the clinic if your pet is not a dog or cat.</p></div>
+      <h3><button aria-expanded="false" aria-controls="a4" id="q4">How can I contact the veterinarian?</button></h3>
+      <div id="a4" role="region" aria-labelledby="q4" hidden><p>Use the call and WhatsApp options in the Contact section.</p></div>
+      <h3><button aria-expanded="false" aria-controls="a5" id="q5">Where is the clinic located?</button></h3>
+      <div id="a5" role="region" aria-labelledby="q5" hidden><p>See the Contact section for the address and directions.</p></div>
+      <h3><button aria-expanded="false" aria-controls="a6" id="q6">What should I do if my pet needs urgent attention?</button></h3>
+      <div id="a6" role="region" aria-labelledby="q6" hidden><p>Contact a qualified veterinary professional or an appropriate local emergency veterinary service straight away. This website cannot assess urgent concerns.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container split contact">
+    <div>
+      <h2>Visit Our Veterinary Clinic</h2>
+      <dl class="facts">
+        <div><dt>Clinic</dt><dd data-cfg="clinicName">[Clinic Name]</dd></div>
+        <div><dt>Veterinarian</dt><dd data-cfg="vetName">Dr. [Name]</dd></div>
+        <div><dt>Address</dt><dd data-cfg="address">[Full clinic address]</dd></div>
+        <div><dt>Opening hours</dt><dd data-cfg="hours">[Opening hours]</dd></div>
+        <div><dt>Phone</dt><dd data-cfg="phoneDisplay">[Phone number]</dd></div>
+        <div><dt>Email</dt><dd data-cfg="email">[Email, if supplied]</dd></div>
+      </dl>
+    </div>
+    <div class="contact-actions">
+      <a class="btn btn-primary" data-link="call" href="tel:+91XXXXXXXXXX">Call the Clinic</a>
+      <a class="btn btn-ghost" data-link="wa" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      <a class="btn btn-ghost" data-link="maps" href="#contact" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container foot-grid">
+    <div><strong data-cfg="clinicName">[Clinic Name]</strong><p>Compassionate veterinary care and easy appointment enquiries for pet owners.</p><span class="tag">Website Concept Demo</span></div>
+    <div><h4>Explore</h4><a href="#home">Home</a><a href="#about">About the Vet</a><a href="#services">Veterinary Services</a><a href="#petcare">Pet Care</a><a href="#faq">FAQs</a></div>
+    <div><h4>Contact</h4><a href="#appointment">Book an Appointment</a><a href="#contact">Contact details</a><a data-link="maps" href="#contact" target="_blank" rel="noopener">Location</a></div>
+  </div>
+  <div class="container copy">&copy; <span id="yr"></span> <span data-cfg="clinicName">[Clinic Name]</span>. All rights reserved.</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

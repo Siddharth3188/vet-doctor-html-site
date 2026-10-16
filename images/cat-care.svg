@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700" role="img" aria-label="Illustration placeholder: cat">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FAF8F1"/><stop offset="1" stop-color="#E4D9C4"/></linearGradient></defs>
+<rect width="900" height="700" fill="url(#g)"/><rect x="54.0" y="56.0" width="198.0" height="210.0" rx="8" fill="#fff" opacity=".35"/>
+<rect y="574.0" width="900" height="126.0" fill="#315B46" opacity=".12"/><g transform="translate(450 330) scale(2.3)"><polygon points="-60,-30 -50,-85 -15,-52" fill="#9aa39b"/><polygon points="60,-30 50,-85 15,-52" fill="#9aa39b"/><ellipse cx="0" cy="0" rx="62" ry="56" fill="#aab3ab"/><circle cx="-22" cy="-6" r="7" fill="#28352E"/><circle cx="22" cy="-6" r="7" fill="#28352E"/><polygon points="-6,12 6,12 0,20" fill="#C47B5A"/><ellipse cx="0" cy="110" rx="56" ry="64" fill="#aab3ab"/></g>
+<text x="450.0" y="686" font-family="sans-serif" font-size="20.0" fill="#315B46" text-anchor="middle" opacity=".7">Placeholder illustration - replace with approved photograph</text></svg>
